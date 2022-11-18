@@ -1,0 +1,824 @@
+body.tweak-transparent-header .header:not(.shrink):not(.transparent-header-theme--override) {
+    transition: background 300ms ease-in-out 0s,padding 140ms ease-in-out,transform 140ms ease-in-out 140ms;
+    background-color: transparent !important;
+}
+
+.header .header-announcement-bar-wrapper .header-border, .header .header-announcement-bar-wrapper .header-dropshadow, .header .header-announcement-bar-wrapper .header-background-gradient, .header .header-announcement-bar-wrapper .header-background-solid, .header .header-announcement-bar-wrapper .header-blur-background {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.header-width-inset .header-inner {
+    max-width: 1200px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+}
+
+.header-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: inherit;
+}
+
+.header-background, .header-background::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: opacity 400ms cubic-bezier(.4,0,.2,1);
+    will-change: opacity;
+}
+
+.header-display-desktop {
+    position: relative;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header-background::after {
+    content: '';
+    opacity: 0;
+}
+
+.header-background, .header-background::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: opacity 400ms cubic-bezier(.4,0,.2,1);
+    will-change: opacity;
+}
+
+.header-display-desktop {
+    position: relative;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header-title {
+    margin-top: -14px;
+}
+
+.header-title {
+    flex-grow: 0;
+    flex-shrink: 0;
+    backface-visibility: hidden;
+}
+.header-title-nav-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    flex: 1 0 67%;
+    align-items: center;
+}
+
+#site-title {
+    font-family: Helvetica;
+    font-size: 1.75em;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding-bottom: 8px;
+}
+
+:not(.header--menu-open) .header-title-text a {
+    color: var(--siteTitleColor);
+}
+.header-title-text a {
+    opacity: 1;
+}
+
+#site-title::after {
+    content: "Klostergaard";
+    font-size: 15px;
+    position: absolute;
+    text-transform: capitalize;
+    top: 31px;
+    left: 2px;
+    letter-spacing: 0px;
+}
+
+.header-layout-nav-right .header-nav {
+    text-align: right;
+    margin-left: auto;
+    padding-left: 2vw;
+}
+
+.header-nav {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.header-layout-nav-right .header-nav {
+    text-align: right;
+    margin-left: auto;
+    padding-left: 2vw;
+}
+
+.header-layout-nav-right .header-nav-list {
+    justify-content: flex-end;
+}
+
+.header-nav-list {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.header-nav-item, .user-accounts-text-link, .cart-style-text, .icon-cart-quantity:not(.legacy-cart), .language-picker {
+    font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 600;
+    line-height: 1.2em;
+    font-size: 1rem;
+    font-family: minion-pro;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0em;
+    text-transform: none;
+    line-height: 1.8em;
+    font-size: 1.1rem;
+}
+
+@media screen and (min-width: 768px), screen and (max-width: calc(1271px)) and (orientation: landscape) {
+    .header-nav-item, .user-accounts-text-link, .cart-style-text, .icon-cart-quantity:not(.legacy-cart), .language-picker {
+
+        font-size: calc((1.1 - 1) * 1.2vw + 1rem);
+    }
+}
+
+.header-nav-list>div {
+    white-space: normal;
+}
+
+.header .header-nav-item:nth-child(1) a {
+    max-width: 100px;
+}
+
+:not(.header--menu-open) .header-nav-wrapper .header-nav-item--active a {
+    color: var(--navigationLinkColor);
+}
+
+body:not(.header--menu-open) .header-nav-item--active>a {
+    background-image: linear-gradient(#fff,#fff);
+    background-size: 1px 3px;
+}
+
+body:not(.header--menu-open) .header-nav-item--active>a {
+    background-image: linear-gradient(currentColor,currentColor);
+    background-repeat: repeat-x;
+    background-size: 1px 1px;
+    background-position: 0 100%;
+    background-position: 0 calc(100% - 0.1em);
+}
+
+.header .header-nav-wrapper a, .header .language-item a {
+    text-decoration: none;
+    backface-visibility: hidden;
+    padding: 0.1em 0;
+}
+
+.header-nav-item a {
+    display: block;
+}
+
+.header-layout-nav-right .header-nav-item:not(:first-child):not(.header-actions-action--cart) {
+    margin-left: 2.2vw;
+}
+
+.header-title-text {
+    margin: 0;
+}
+
+.header .header-nav-item:last-child a {
+    transform: rotate(90deg) translate(38%,0%);
+}
+
+:not(.header--menu-open) .header-nav-wrapper a {
+    color: var(--navigationLinkColor);
+}
+.header .header-nav-wrapper a, .header .language-item a {
+    text-decoration: none;
+    backface-visibility: hidden;
+    padding: 0.1em 0;
+}
+
+@media screen and (min-width: 768px), screen and (max-width: calc(1271px)) and (orientation: landscape) {
+    .header-title-text {
+        font-size: calc((2 - 1) * 1.2vw + 1rem);
+    }
+}
+
+.header-title-text {
+    font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 600;
+    line-height: 1.2em;
+    font-family: europa;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0em;
+    text-transform: none;
+    line-height: 1.4em;
+    font-size: 2rem;
+}
+
+header {
+    -webkit-text-size-adjust: 100%;
+
+    --white-hsl: 0, 0%, 100%;
+    --black-hsl: 0, 0%, 0%;
+    --safeLightAccent-hsl: 218.6, 79.01%, 64.51%;
+    --safeDarkAccent-hsl: 218.6, 79.01%, 64.51%;
+    --safeInverseAccent-hsl: 0, 0%, 100%;
+    --safeInverseLightAccent-hsl: 0, 0%, 100%;
+    --safeInverseDarkAccent-hsl: 0, 0%, 100%;
+    --accent-hsl: 218.6, 79.01%, 64.51%;
+    --lightAccent-hsl: 60, 7.46%, 86.86%;
+    --darkAccent-hsl: 330, 2.44%, 16.08%;
+    overflow-wrap: break-word;
+    --sqs-site-gutter: 3vw;
+    --sqs-mobile-site-gutter: 6vw;
+    --sqs-site-max-width: 1200px;
+    color: var(--paragraphMediumColor);
+    font-family: minion-pro;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0em;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    font-size: calc((1.1 - 1) * 1.2vw + 1rem);
+    display: block;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    line-height: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    pointer-events: none;
+    --announcement-bar-background-color: hsla(var(--lightAccent-hsl), 1);
+    --announcement-bar-text-color: hsla(var(--black-hsl), 1);
+    --backgroundOverlayColor: hsla(var(--darkAccent-hsl), 1);
+    --gradientHeaderBackgroundColor: hsla(var(--white-hsl), 1);
+    --gradientHeaderBorderColor: hsla(var(--black-hsl), 1);
+    --gradientHeaderDropShadowColor: hsla(var(--black-hsl), 1);
+    --gradientHeaderNavigationColor: hsla(var(--black-hsl), 1);
+    --headingExtraLargeColor: hsla(var(--white-hsl), 1);
+    --headingLargeColor: hsla(var(--white-hsl), 1);
+    --headingLinkColor: hsla(var(--lightAccent-hsl), 1);
+    --headingMediumColor: hsla(var(--white-hsl), 1);
+    --headingSmallColor: hsla(var(--white-hsl), 1);
+    --image-block-card-image-button-bg-color: hsla(var(--safeLightAccent-hsl), 1);
+    --image-block-card-image-button-text-color: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --image-block-card-image-overlay-color: hsla(var(--darkAccent-hsl), 1);
+    --image-block-card-image-subtitle-color: hsla(var(--white-hsl), 1);
+    --image-block-card-image-title-bg-color: hsla(var(--darkAccent-hsl), 0);
+    --image-block-card-image-title-color: hsla(var(--white-hsl), 1);
+    --image-block-card-inline-link-color: hsla(var(--white-hsl), 1);
+    --image-block-collage-background-color: hsla(var(--white-hsl), 1);
+    --image-block-collage-image-button-bg-color: hsla(var(--safeDarkAccent-hsl), 1);
+    --image-block-collage-image-button-text-color: hsla(var(--safeInverseDarkAccent-hsl), 1);
+    --image-block-collage-image-overlay-color: hsla(var(--darkAccent-hsl), 1);
+    --image-block-collage-image-subtitle-color: hsla(var(--black-hsl), 1);
+    --image-block-collage-image-title-bg-color: hsla(var(--darkAccent-hsl), 0);
+    --image-block-collage-image-title-color: hsla(var(--black-hsl), 1);
+    --image-block-collage-inline-link-color: hsla(var(--black-hsl), 1);
+    --image-block-overlap-image-button-bg-color: hsla(var(--safeLightAccent-hsl), 1);
+    --image-block-overlap-image-button-text-color: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --image-block-overlap-image-overlay-color: hsla(var(--darkAccent-hsl), 1);
+    --image-block-overlap-image-subtitle-color: hsla(var(--white-hsl), 1);
+    --image-block-overlap-image-title-bg-color: hsla(var(--darkAccent-hsl), 1);
+    --image-block-overlap-image-title-color: hsla(var(--white-hsl), 1);
+    --image-block-overlap-inline-link-color: hsla(var(--white-hsl), 1);
+    --image-block-overlay-color: hsla(var(--black-hsl), 0.5);
+    --image-block-poster-image-button-bg-color: hsla(var(--safeLightAccent-hsl), 1);
+    --image-block-poster-image-button-text-color: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --image-block-poster-image-overlay-color: hsla(var(--darkAccent-hsl), 1);
+    --image-block-poster-image-subtitle-color: hsla(var(--white-hsl), 1);
+    --image-block-poster-image-title-bg-color-v2: hsla(var(--darkAccent-hsl), 0);
+    --image-block-poster-image-title-color: hsla(var(--white-hsl), 1);
+    --image-block-poster-inline-link-color: hsla(var(--white-hsl), 1);
+    --image-block-stack-image-button-bg-color: hsla(var(--safeLightAccent-hsl), 1);
+    --image-block-stack-image-button-text-color: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --image-block-stack-image-overlay-color: hsla(var(--darkAccent-hsl), 1);
+    --image-block-stack-image-subtitle-color: hsla(var(--white-hsl), 1);
+    --image-block-stack-image-title-bg-color: hsla(var(--darkAccent-hsl), 0);
+    --image-block-stack-image-title-color: hsla(var(--white-hsl), 1);
+    --image-block-stack-inline-link-color: hsla(var(--white-hsl), 1);
+    --list-section-banner-slideshow-arrow-background-color: hsla(var(--safeLightAccent-hsl), 1);
+    --list-section-banner-slideshow-arrow-color: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --list-section-banner-slideshow-button-background-color: hsla(var(--safeLightAccent-hsl), 1);
+    --list-section-banner-slideshow-button-text-color: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --list-section-banner-slideshow-card-button-background-color: hsla(var(--safeDarkAccent-hsl), 1);
+    --list-section-banner-slideshow-card-button-text-color: hsla(var(--safeInverseDarkAccent-hsl), 1);
+    --list-section-banner-slideshow-card-color: hsla(var(--white-hsl), 1);
+    --list-section-banner-slideshow-card-description-color: hsla(var(--black-hsl), 1);
+    --list-section-banner-slideshow-card-description-link-color: hsla(var(--safeLightAccent-hsl), 1);
+    --list-section-banner-slideshow-card-title-color: hsla(var(--black-hsl), 1);
+    --list-section-banner-slideshow-description-color: hsla(var(--white-hsl), 1);
+    --list-section-banner-slideshow-title-color: hsla(var(--white-hsl), 1);
+    --list-section-carousel-arrow-background-color: hsla(var(--safeLightAccent-hsl), 1);
+    --list-section-carousel-arrow-color: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --list-section-carousel-button-background-color: hsla(var(--safeLightAccent-hsl), 1);
+    --list-section-carousel-button-text-color: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --list-section-carousel-card-button-background-color: hsla(var(--safeDarkAccent-hsl), 1);
+    --list-section-carousel-card-button-text-color: hsla(var(--safeInverseDarkAccent-hsl), 1);
+    --list-section-carousel-card-color: hsla(var(--white-hsl), 1);
+    --list-section-carousel-card-description-color: hsla(var(--black-hsl), 1);
+    --list-section-carousel-card-description-link-color: hsla(var(--safeLightAccent-hsl), 1);
+    --list-section-carousel-card-title-color: hsla(var(--black-hsl), 1);
+    --list-section-carousel-description-color: hsla(var(--white-hsl), 1);
+    --list-section-carousel-title-color: hsla(var(--white-hsl), 1);
+    --list-section-simple-button-background-color: hsla(var(--safeLightAccent-hsl), 1);
+    --list-section-simple-button-text-color: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --list-section-simple-card-button-background-color: hsla(var(--safeDarkAccent-hsl), 1);
+    --list-section-simple-card-button-text-color: hsla(var(--safeInverseDarkAccent-hsl), 1);
+    --list-section-simple-card-color: hsla(var(--white-hsl), 1);
+    --list-section-simple-card-description-color: hsla(var(--black-hsl), 1);
+    --list-section-simple-card-description-link-color: hsla(var(--safeLightAccent-hsl), 1);
+    --list-section-simple-card-title-color: hsla(var(--black-hsl), 1);
+    --list-section-simple-description-color: hsla(var(--white-hsl), 1);
+    --list-section-simple-title-color: hsla(var(--white-hsl), 1);
+    --list-section-title-color: hsla(var(--white-hsl), 1);
+    --menuOverlayBackgroundColor: hsla(var(--darkAccent-hsl), 1);
+    --menuOverlayButtonBackgroundColor: hsla(var(--safeLightAccent-hsl), 1);
+    --menuOverlayButtonTextColor: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --menuOverlayNavigationLinkColor: hsla(var(--white-hsl), 1);
+    --navigationLinkColor: hsla(var(--white-hsl), 1);
+    --paragraphLargeColor: hsla(var(--white-hsl), 1);
+    --paragraphLinkColor: hsla(var(--safeLightAccent-hsl), 1);
+    --paragraphMediumColor: hsla(var(--white-hsl), 1);
+    --paragraphSmallColor: hsla(var(--white-hsl), 1);
+    --portfolio-grid-basic-title-color: hsla(var(--white-hsl), 1);
+    --portfolio-grid-overlay-overlay-color: hsla(var(--darkAccent-hsl), 1);
+    --portfolio-grid-overlay-title-color: hsla(var(--white-hsl), 1);
+    --portfolio-hover-follow-title-color: hsla(var(--white-hsl), 1);
+    --portfolio-hover-static-title-color: hsla(var(--white-hsl), 1);
+    --portfolio-index-background-title-color: hsla(var(--white-hsl), 1);
+    --primaryButtonBackgroundColor: hsla(var(--safeLightAccent-hsl), 1);
+    --primaryButtonTextColor: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --secondaryButtonBackgroundColor: hsla(var(--safeLightAccent-hsl), 1);
+    --secondaryButtonTextColor: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --section-inset-border-color: hsla(var(--white-hsl), 1);
+    --shape-block-background-color: hsla(var(--white-hsl), 1);
+    --shape-block-dropshadow-color: hsla(var(--white-hsl), 1);
+    --siteBackgroundColor: hsla(var(--darkAccent-hsl), 1);
+    --siteTitleColor: hsla(var(--white-hsl), 1);
+    --social-links-block-main-icon-color: hsla(var(--white-hsl), 1);
+    --social-links-block-secondary-icon-color: hsla(var(--darkAccent-hsl), 1);
+    --solidHeaderBackgroundColor: hsla(var(--white-hsl), 1);
+    --solidHeaderBorderColor: hsla(var(--black-hsl), 1);
+    --solidHeaderDropShadowColor: hsla(var(--black-hsl), 1);
+    --solidHeaderNavigationColor: hsla(var(--black-hsl), 1);
+    --summary-block-limited-availability-label-color: hsla(var(--white-hsl), 1);
+    --tertiaryButtonBackgroundColor: hsla(var(--safeLightAccent-hsl), 1);
+    --tertiaryButtonTextColor: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --text-highlight-color: hsla(var(--safeLightAccent-hsl), 1);
+    --text-highlight-color-on-background: hsla(var(--safeLightAccent-hsl), 1);
+    --tweak-accordion-block-background-color: hsla(var(--white-hsl), 1);
+    --tweak-accordion-block-divider-color: hsla(var(--white-hsl), 1);
+    --tweak-accordion-block-divider-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-accordion-block-icon-color: hsla(var(--white-hsl), 1);
+    --tweak-accordion-block-icon-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-blog-alternating-side-by-side-list-excerpt-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-alternating-side-by-side-list-meta-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-alternating-side-by-side-list-read-more-color: hsla(var(--safeLightAccent-hsl), 1);
+    --tweak-blog-alternating-side-by-side-list-title-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-basic-grid-list-excerpt-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-basic-grid-list-meta-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-basic-grid-list-read-more-color: hsla(var(--safeLightAccent-hsl), 1);
+    --tweak-blog-basic-grid-list-title-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-item-author-profile-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-item-comment-meta-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-item-comment-text-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-item-meta-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-item-pagination-icon-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-item-pagination-meta-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-item-pagination-title-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-item-title-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-masonry-list-excerpt-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-masonry-list-meta-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-masonry-list-read-more-color: hsla(var(--safeLightAccent-hsl), 1);
+    --tweak-blog-masonry-list-title-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-side-by-side-list-excerpt-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-side-by-side-list-meta-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-side-by-side-list-read-more-color: hsla(var(--safeLightAccent-hsl), 1);
+    --tweak-blog-side-by-side-list-title-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-single-column-list-excerpt-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-single-column-list-meta-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-single-column-list-read-more-color: hsla(var(--safeLightAccent-hsl), 1);
+    --tweak-blog-single-column-list-title-color: hsla(var(--white-hsl), 1);
+    --tweak-content-link-block-title-color: hsla(var(--white-hsl), 1);
+    --tweak-events-item-pagination-date-color: hsla(var(--white-hsl), 1);
+    --tweak-events-item-pagination-icon-color: hsla(var(--white-hsl), 1);
+    --tweak-events-item-pagination-title-color: hsla(var(--white-hsl), 1);
+    --tweak-form-block-background-color: hsla(var(--white-hsl), 1);
+    --tweak-form-block-button-background-color: hsla(var(--safeLightAccent-hsl), 1);
+    --tweak-form-block-button-background-color-on-background: hsla(var(--safeDarkAccent-hsl), 1);
+    --tweak-form-block-button-text-color: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --tweak-form-block-button-text-color-on-background: hsla(var(--safeInverseDarkAccent-hsl), 1);
+    --tweak-form-block-caption-color: hsla(var(--white-hsl), 1);
+    --tweak-form-block-caption-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-form-block-description-color: hsla(var(--white-hsl), 1);
+    --tweak-form-block-description-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-form-block-option-color: hsla(var(--white-hsl), 1);
+    --tweak-form-block-option-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-form-block-survey-title-color: hsla(var(--white-hsl), 1);
+    --tweak-form-block-survey-title-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-form-block-title-color: hsla(var(--white-hsl), 1);
+    --tweak-form-block-title-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-gallery-icon-background-color: hsla(var(--darkAccent-hsl), 1);
+    --tweak-gallery-icon-color: hsla(var(--white-hsl), 1);
+    --tweak-gallery-lightbox-background-color: hsla(var(--darkAccent-hsl), 1);
+    --tweak-gallery-lightbox-icon-color: hsla(var(--white-hsl), 1);
+    --tweak-heading-extra-large-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-heading-large-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-heading-medium-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-heading-small-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-line-block-line-color: hsla(var(--white-hsl), 1);
+    --tweak-marquee-block-background-color: hsla(var(--white-hsl), 1);
+    --tweak-marquee-block-heading-color: hsla(var(--white-hsl), 1);
+    --tweak-marquee-block-heading-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-marquee-block-paragraph-color: hsla(var(--white-hsl), 1);
+    --tweak-marquee-block-paragraph-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-menu-block-item-description-color: hsla(var(--white-hsl), 1);
+    --tweak-menu-block-item-price-color: hsla(var(--white-hsl), 1);
+    --tweak-menu-block-item-title-color: hsla(var(--white-hsl), 1);
+    --tweak-menu-block-nav-color: hsla(var(--white-hsl), 1);
+    --tweak-menu-block-title-color: hsla(var(--white-hsl), 1);
+    --tweak-newsletter-block-background-color: hsla(var(--white-hsl), 1);
+    --tweak-newsletter-block-button-background-color: hsla(var(--safeLightAccent-hsl), 1);
+    --tweak-newsletter-block-button-background-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-newsletter-block-button-text-color: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --tweak-newsletter-block-button-text-color-on-background: hsla(var(--safeInverseDarkAccent-hsl), 1);
+    --tweak-newsletter-block-description-color: hsla(var(--white-hsl), 1);
+    --tweak-newsletter-block-description-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-newsletter-block-footnote-color: hsla(var(--white-hsl), 1);
+    --tweak-newsletter-block-footnote-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-newsletter-block-title-color: hsla(var(--white-hsl), 1);
+    --tweak-newsletter-block-title-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-paragraph-large-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-paragraph-link-color-on-background: hsla(var(--safeLightAccent-hsl), 1);
+    --tweak-paragraph-medium-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-paragraph-small-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-portfolio-item-pagination-icon-color: hsla(var(--white-hsl), 1);
+    --tweak-portfolio-item-pagination-meta-color: hsla(var(--white-hsl), 1);
+    --tweak-portfolio-item-pagination-title-color: hsla(var(--white-hsl), 1);
+    --tweak-product-basic-item-breadcumb-nav-color: hsla(var(--white-hsl), 1);
+    --tweak-product-basic-item-description-color: hsla(var(--white-hsl), 1);
+    --tweak-product-basic-item-gallery-controls-color: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --tweak-product-basic-item-price-color: hsla(var(--white-hsl), 1);
+    --tweak-product-basic-item-sale-price-color: hsla(var(--accent-hsl), 1);
+    --tweak-product-basic-item-scarcity-color: hsla(var(--accent-hsl), 1);
+    --tweak-product-basic-item-title-color: hsla(var(--white-hsl), 1);
+    --tweak-product-basic-item-variant-fields-color: hsla(var(--white-hsl), 1);
+    --tweak-product-grid-text-below-list-category-nav-color: hsla(var(--white-hsl), 1);
+    --tweak-product-grid-text-below-list-pagination-color: hsla(var(--white-hsl), 1);
+    --tweak-product-grid-text-below-list-price-color: hsla(var(--white-hsl), 1);
+    --tweak-product-grid-text-below-list-sale-price-color: hsla(var(--accent-hsl), 1);
+    --tweak-product-grid-text-below-list-scarcity-color: hsla(var(--white-hsl), 1);
+    --tweak-product-grid-text-below-list-status-color: hsla(var(--accent-hsl), 1);
+    --tweak-product-grid-text-below-list-title-color: hsla(var(--white-hsl), 1);
+    --tweak-product-quick-view-button-color: hsla(var(--black-hsl), 1);
+    --tweak-product-quick-view-lightbox-controls-color: hsla(var(--black-hsl), 1);
+    --tweak-product-quick-view-lightbox-overlay-color: hsla(var(--white-hsl), 1);
+    --tweak-quote-block-background-color: hsla(var(--white-hsl), 1);
+    --tweak-quote-block-source-color: hsla(var(--white-hsl), 1);
+    --tweak-quote-block-source-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-quote-block-text-color: hsla(var(--white-hsl), 1);
+    --tweak-quote-block-text-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-summary-block-background-color: hsla(var(--white-hsl), 1);
+    --tweak-summary-block-excerpt-color: hsla(var(--white-hsl), 1);
+    --tweak-summary-block-excerpt-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-summary-block-header-text-color: hsla(var(--white-hsl), 1);
+    --tweak-summary-block-header-text-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-summary-block-primary-metadata-color: hsla(var(--white-hsl), 1);
+    --tweak-summary-block-primary-metadata-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-summary-block-read-more-color: hsla(var(--white-hsl), 1);
+    --tweak-summary-block-read-more-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-summary-block-secondary-metadata-color: hsla(var(--white-hsl), 1);
+    --tweak-summary-block-secondary-metadata-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-summary-block-title-color: hsla(var(--white-hsl), 1);
+    --tweak-summary-block-title-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-text-block-background-color: hsla(var(--white-hsl), 1);
+    --tweak-video-item-description-color: hsla(var(--white-hsl), 1);
+    --tweak-video-item-meta-color: hsla(var(--white-hsl), 1);
+    --tweak-video-item-pagination-icon-color: hsla(var(--white-hsl), 1);
+    --tweak-video-item-pagination-title-color: hsla(var(--white-hsl), 1);
+    --tweak-video-item-title-color: hsla(var(--white-hsl), 1);
+    --video-grid-basic-description-color: hsla(var(--white-hsl), 1);
+    --video-grid-basic-meta-color: hsla(var(--white-hsl), 1);
+    --video-grid-basic-title-color: hsla(var(--white-hsl), 1);
+    --video-grid-category-nav-color: hsla(var(--white-hsl), 1);
+    transition: background 300ms ease-in-out 0s,padding 140ms ease-in-out,transform 140ms ease-in-out 140ms;
+    background-color: transparent !important;
+}
+
+
+
+.header-announcement-bar-wrapper {
+
+    -webkit-text-size-adjust: 100%;
+    --white-hsl: 0, 0%, 100%;
+    --black-hsl: 0, 0%, 0%;
+    --safeLightAccent-hsl: 218.6, 79.01%, 64.51%;
+    --safeDarkAccent-hsl: 218.6, 79.01%, 64.51%;
+    --safeInverseAccent-hsl: 0, 0%, 100%;
+    --safeInverseLightAccent-hsl: 0, 0%, 100%;
+    --safeInverseDarkAccent-hsl: 0, 0%, 100%;
+    --accent-hsl: 218.6, 79.01%, 64.51%;
+    --lightAccent-hsl: 60, 7.46%, 86.86%;
+    --darkAccent-hsl: 330, 2.44%, 16.08%;
+    overflow-wrap: break-word;
+    --sqs-site-gutter: 3vw;
+    --sqs-mobile-site-gutter: 6vw;
+    --sqs-site-max-width: 1200px;
+    color: var(--paragraphMediumColor);
+    font-family: minion-pro;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0em;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    font-size: calc((1.1 - 1) * 1.2vw + 1rem);
+    line-height: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    --announcement-bar-background-color: hsla(var(--lightAccent-hsl), 1);
+    --announcement-bar-text-color: hsla(var(--black-hsl), 1);
+    --backgroundOverlayColor: hsla(var(--darkAccent-hsl), 1);
+    --gradientHeaderBackgroundColor: hsla(var(--white-hsl), 1);
+    --gradientHeaderBorderColor: hsla(var(--black-hsl), 1);
+    --gradientHeaderDropShadowColor: hsla(var(--black-hsl), 1);
+    --gradientHeaderNavigationColor: hsla(var(--black-hsl), 1);
+    --headingExtraLargeColor: hsla(var(--white-hsl), 1);
+    --headingLargeColor: hsla(var(--white-hsl), 1);
+    --headingLinkColor: hsla(var(--lightAccent-hsl), 1);
+    --headingMediumColor: hsla(var(--white-hsl), 1);
+    --headingSmallColor: hsla(var(--white-hsl), 1);
+    --image-block-card-image-button-bg-color: hsla(var(--safeLightAccent-hsl), 1);
+    --image-block-card-image-button-text-color: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --image-block-card-image-overlay-color: hsla(var(--darkAccent-hsl), 1);
+    --image-block-card-image-subtitle-color: hsla(var(--white-hsl), 1);
+    --image-block-card-image-title-bg-color: hsla(var(--darkAccent-hsl), 0);
+    --image-block-card-image-title-color: hsla(var(--white-hsl), 1);
+    --image-block-card-inline-link-color: hsla(var(--white-hsl), 1);
+    --image-block-collage-background-color: hsla(var(--white-hsl), 1);
+    --image-block-collage-image-button-bg-color: hsla(var(--safeDarkAccent-hsl), 1);
+    --image-block-collage-image-button-text-color: hsla(var(--safeInverseDarkAccent-hsl), 1);
+    --image-block-collage-image-overlay-color: hsla(var(--darkAccent-hsl), 1);
+    --image-block-collage-image-subtitle-color: hsla(var(--black-hsl), 1);
+    --image-block-collage-image-title-bg-color: hsla(var(--darkAccent-hsl), 0);
+    --image-block-collage-image-title-color: hsla(var(--black-hsl), 1);
+    --image-block-collage-inline-link-color: hsla(var(--black-hsl), 1);
+    --image-block-overlap-image-button-bg-color: hsla(var(--safeLightAccent-hsl), 1);
+    --image-block-overlap-image-button-text-color: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --image-block-overlap-image-overlay-color: hsla(var(--darkAccent-hsl), 1);
+    --image-block-overlap-image-subtitle-color: hsla(var(--white-hsl), 1);
+    --image-block-overlap-image-title-bg-color: hsla(var(--darkAccent-hsl), 1);
+    --image-block-overlap-image-title-color: hsla(var(--white-hsl), 1);
+    --image-block-overlap-inline-link-color: hsla(var(--white-hsl), 1);
+    --image-block-overlay-color: hsla(var(--black-hsl), 0.5);
+    --image-block-poster-image-button-bg-color: hsla(var(--safeLightAccent-hsl), 1);
+    --image-block-poster-image-button-text-color: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --image-block-poster-image-overlay-color: hsla(var(--darkAccent-hsl), 1);
+    --image-block-poster-image-subtitle-color: hsla(var(--white-hsl), 1);
+    --image-block-poster-image-title-bg-color-v2: hsla(var(--darkAccent-hsl), 0);
+    --image-block-poster-image-title-color: hsla(var(--white-hsl), 1);
+    --image-block-poster-inline-link-color: hsla(var(--white-hsl), 1);
+    --image-block-stack-image-button-bg-color: hsla(var(--safeLightAccent-hsl), 1);
+    --image-block-stack-image-button-text-color: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --image-block-stack-image-overlay-color: hsla(var(--darkAccent-hsl), 1);
+    --image-block-stack-image-subtitle-color: hsla(var(--white-hsl), 1);
+    --image-block-stack-image-title-bg-color: hsla(var(--darkAccent-hsl), 0);
+    --image-block-stack-image-title-color: hsla(var(--white-hsl), 1);
+    --image-block-stack-inline-link-color: hsla(var(--white-hsl), 1);
+    --list-section-banner-slideshow-arrow-background-color: hsla(var(--safeLightAccent-hsl), 1);
+    --list-section-banner-slideshow-arrow-color: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --list-section-banner-slideshow-button-background-color: hsla(var(--safeLightAccent-hsl), 1);
+    --list-section-banner-slideshow-button-text-color: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --list-section-banner-slideshow-card-button-background-color: hsla(var(--safeDarkAccent-hsl), 1);
+    --list-section-banner-slideshow-card-button-text-color: hsla(var(--safeInverseDarkAccent-hsl), 1);
+    --list-section-banner-slideshow-card-color: hsla(var(--white-hsl), 1);
+    --list-section-banner-slideshow-card-description-color: hsla(var(--black-hsl), 1);
+    --list-section-banner-slideshow-card-description-link-color: hsla(var(--safeLightAccent-hsl), 1);
+    --list-section-banner-slideshow-card-title-color: hsla(var(--black-hsl), 1);
+    --list-section-banner-slideshow-description-color: hsla(var(--white-hsl), 1);
+    --list-section-banner-slideshow-title-color: hsla(var(--white-hsl), 1);
+    --list-section-carousel-arrow-background-color: hsla(var(--safeLightAccent-hsl), 1);
+    --list-section-carousel-arrow-color: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --list-section-carousel-button-background-color: hsla(var(--safeLightAccent-hsl), 1);
+    --list-section-carousel-button-text-color: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --list-section-carousel-card-button-background-color: hsla(var(--safeDarkAccent-hsl), 1);
+    --list-section-carousel-card-button-text-color: hsla(var(--safeInverseDarkAccent-hsl), 1);
+    --list-section-carousel-card-color: hsla(var(--white-hsl), 1);
+    --list-section-carousel-card-description-color: hsla(var(--black-hsl), 1);
+    --list-section-carousel-card-description-link-color: hsla(var(--safeLightAccent-hsl), 1);
+    --list-section-carousel-card-title-color: hsla(var(--black-hsl), 1);
+    --list-section-carousel-description-color: hsla(var(--white-hsl), 1);
+    --list-section-carousel-title-color: hsla(var(--white-hsl), 1);
+    --list-section-simple-button-background-color: hsla(var(--safeLightAccent-hsl), 1);
+    --list-section-simple-button-text-color: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --list-section-simple-card-button-background-color: hsla(var(--safeDarkAccent-hsl), 1);
+    --list-section-simple-card-button-text-color: hsla(var(--safeInverseDarkAccent-hsl), 1);
+    --list-section-simple-card-color: hsla(var(--white-hsl), 1);
+    --list-section-simple-card-description-color: hsla(var(--black-hsl), 1);
+    --list-section-simple-card-description-link-color: hsla(var(--safeLightAccent-hsl), 1);
+    --list-section-simple-card-title-color: hsla(var(--black-hsl), 1);
+    --list-section-simple-description-color: hsla(var(--white-hsl), 1);
+    --list-section-simple-title-color: hsla(var(--white-hsl), 1);
+    --list-section-title-color: hsla(var(--white-hsl), 1);
+    --menuOverlayBackgroundColor: hsla(var(--darkAccent-hsl), 1);
+    --menuOverlayButtonBackgroundColor: hsla(var(--safeLightAccent-hsl), 1);
+    --menuOverlayButtonTextColor: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --menuOverlayNavigationLinkColor: hsla(var(--white-hsl), 1);
+    --navigationLinkColor: hsla(var(--white-hsl), 1);
+    --paragraphLargeColor: hsla(var(--white-hsl), 1);
+    --paragraphLinkColor: hsla(var(--safeLightAccent-hsl), 1);
+    --paragraphMediumColor: hsla(var(--white-hsl), 1);
+    --paragraphSmallColor: hsla(var(--white-hsl), 1);
+    --portfolio-grid-basic-title-color: hsla(var(--white-hsl), 1);
+    --portfolio-grid-overlay-overlay-color: hsla(var(--darkAccent-hsl), 1);
+    --portfolio-grid-overlay-title-color: hsla(var(--white-hsl), 1);
+    --portfolio-hover-follow-title-color: hsla(var(--white-hsl), 1);
+    --portfolio-hover-static-title-color: hsla(var(--white-hsl), 1);
+    --portfolio-index-background-title-color: hsla(var(--white-hsl), 1);
+    --primaryButtonBackgroundColor: hsla(var(--safeLightAccent-hsl), 1);
+    --primaryButtonTextColor: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --secondaryButtonBackgroundColor: hsla(var(--safeLightAccent-hsl), 1);
+    --secondaryButtonTextColor: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --section-inset-border-color: hsla(var(--white-hsl), 1);
+    --shape-block-background-color: hsla(var(--white-hsl), 1);
+    --shape-block-dropshadow-color: hsla(var(--white-hsl), 1);
+    --siteBackgroundColor: hsla(var(--darkAccent-hsl), 1);
+    --siteTitleColor: hsla(var(--white-hsl), 1);
+    --social-links-block-main-icon-color: hsla(var(--white-hsl), 1);
+    --social-links-block-secondary-icon-color: hsla(var(--darkAccent-hsl), 1);
+    --solidHeaderBackgroundColor: hsla(var(--white-hsl), 1);
+    --solidHeaderBorderColor: hsla(var(--black-hsl), 1);
+    --solidHeaderDropShadowColor: hsla(var(--black-hsl), 1);
+    --solidHeaderNavigationColor: hsla(var(--black-hsl), 1);
+    --summary-block-limited-availability-label-color: hsla(var(--white-hsl), 1);
+    --tertiaryButtonBackgroundColor: hsla(var(--safeLightAccent-hsl), 1);
+    --tertiaryButtonTextColor: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --text-highlight-color: hsla(var(--safeLightAccent-hsl), 1);
+    --text-highlight-color-on-background: hsla(var(--safeLightAccent-hsl), 1);
+    --tweak-accordion-block-background-color: hsla(var(--white-hsl), 1);
+    --tweak-accordion-block-divider-color: hsla(var(--white-hsl), 1);
+    --tweak-accordion-block-divider-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-accordion-block-icon-color: hsla(var(--white-hsl), 1);
+    --tweak-accordion-block-icon-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-blog-alternating-side-by-side-list-excerpt-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-alternating-side-by-side-list-meta-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-alternating-side-by-side-list-read-more-color: hsla(var(--safeLightAccent-hsl), 1);
+    --tweak-blog-alternating-side-by-side-list-title-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-basic-grid-list-excerpt-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-basic-grid-list-meta-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-basic-grid-list-read-more-color: hsla(var(--safeLightAccent-hsl), 1);
+    --tweak-blog-basic-grid-list-title-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-item-author-profile-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-item-comment-meta-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-item-comment-text-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-item-meta-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-item-pagination-icon-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-item-pagination-meta-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-item-pagination-title-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-item-title-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-masonry-list-excerpt-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-masonry-list-meta-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-masonry-list-read-more-color: hsla(var(--safeLightAccent-hsl), 1);
+    --tweak-blog-masonry-list-title-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-side-by-side-list-excerpt-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-side-by-side-list-meta-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-side-by-side-list-read-more-color: hsla(var(--safeLightAccent-hsl), 1);
+    --tweak-blog-side-by-side-list-title-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-single-column-list-excerpt-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-single-column-list-meta-color: hsla(var(--white-hsl), 1);
+    --tweak-blog-single-column-list-read-more-color: hsla(var(--safeLightAccent-hsl), 1);
+    --tweak-blog-single-column-list-title-color: hsla(var(--white-hsl), 1);
+    --tweak-content-link-block-title-color: hsla(var(--white-hsl), 1);
+    --tweak-events-item-pagination-date-color: hsla(var(--white-hsl), 1);
+    --tweak-events-item-pagination-icon-color: hsla(var(--white-hsl), 1);
+    --tweak-events-item-pagination-title-color: hsla(var(--white-hsl), 1);
+    --tweak-form-block-background-color: hsla(var(--white-hsl), 1);
+    --tweak-form-block-button-background-color: hsla(var(--safeLightAccent-hsl), 1);
+    --tweak-form-block-button-background-color-on-background: hsla(var(--safeDarkAccent-hsl), 1);
+    --tweak-form-block-button-text-color: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --tweak-form-block-button-text-color-on-background: hsla(var(--safeInverseDarkAccent-hsl), 1);
+    --tweak-form-block-caption-color: hsla(var(--white-hsl), 1);
+    --tweak-form-block-caption-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-form-block-description-color: hsla(var(--white-hsl), 1);
+    --tweak-form-block-description-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-form-block-option-color: hsla(var(--white-hsl), 1);
+    --tweak-form-block-option-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-form-block-survey-title-color: hsla(var(--white-hsl), 1);
+    --tweak-form-block-survey-title-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-form-block-title-color: hsla(var(--white-hsl), 1);
+    --tweak-form-block-title-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-gallery-icon-background-color: hsla(var(--darkAccent-hsl), 1);
+    --tweak-gallery-icon-color: hsla(var(--white-hsl), 1);
+    --tweak-gallery-lightbox-background-color: hsla(var(--darkAccent-hsl), 1);
+    --tweak-gallery-lightbox-icon-color: hsla(var(--white-hsl), 1);
+    --tweak-heading-extra-large-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-heading-large-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-heading-medium-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-heading-small-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-line-block-line-color: hsla(var(--white-hsl), 1);
+    --tweak-marquee-block-background-color: hsla(var(--white-hsl), 1);
+    --tweak-marquee-block-heading-color: hsla(var(--white-hsl), 1);
+    --tweak-marquee-block-heading-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-marquee-block-paragraph-color: hsla(var(--white-hsl), 1);
+    --tweak-marquee-block-paragraph-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-menu-block-item-description-color: hsla(var(--white-hsl), 1);
+    --tweak-menu-block-item-price-color: hsla(var(--white-hsl), 1);
+    --tweak-menu-block-item-title-color: hsla(var(--white-hsl), 1);
+    --tweak-menu-block-nav-color: hsla(var(--white-hsl), 1);
+    --tweak-menu-block-title-color: hsla(var(--white-hsl), 1);
+    --tweak-newsletter-block-background-color: hsla(var(--white-hsl), 1);
+    --tweak-newsletter-block-button-background-color: hsla(var(--safeLightAccent-hsl), 1);
+    --tweak-newsletter-block-button-background-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-newsletter-block-button-text-color: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --tweak-newsletter-block-button-text-color-on-background: hsla(var(--safeInverseDarkAccent-hsl), 1);
+    --tweak-newsletter-block-description-color: hsla(var(--white-hsl), 1);
+    --tweak-newsletter-block-description-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-newsletter-block-footnote-color: hsla(var(--white-hsl), 1);
+    --tweak-newsletter-block-footnote-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-newsletter-block-title-color: hsla(var(--white-hsl), 1);
+    --tweak-newsletter-block-title-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-paragraph-large-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-paragraph-link-color-on-background: hsla(var(--safeLightAccent-hsl), 1);
+    --tweak-paragraph-medium-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-paragraph-small-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-portfolio-item-pagination-icon-color: hsla(var(--white-hsl), 1);
+    --tweak-portfolio-item-pagination-meta-color: hsla(var(--white-hsl), 1);
+    --tweak-portfolio-item-pagination-title-color: hsla(var(--white-hsl), 1);
+    --tweak-product-basic-item-breadcumb-nav-color: hsla(var(--white-hsl), 1);
+    --tweak-product-basic-item-description-color: hsla(var(--white-hsl), 1);
+    --tweak-product-basic-item-gallery-controls-color: hsla(var(--safeInverseLightAccent-hsl), 1);
+    --tweak-product-basic-item-price-color: hsla(var(--white-hsl), 1);
+    --tweak-product-basic-item-sale-price-color: hsla(var(--accent-hsl), 1);
+    --tweak-product-basic-item-scarcity-color: hsla(var(--accent-hsl), 1);
+    --tweak-product-basic-item-title-color: hsla(var(--white-hsl), 1);
+    --tweak-product-basic-item-variant-fields-color: hsla(var(--white-hsl), 1);
+    --tweak-product-grid-text-below-list-category-nav-color: hsla(var(--white-hsl), 1);
+    --tweak-product-grid-text-below-list-pagination-color: hsla(var(--white-hsl), 1);
+    --tweak-product-grid-text-below-list-price-color: hsla(var(--white-hsl), 1);
+    --tweak-product-grid-text-below-list-sale-price-color: hsla(var(--accent-hsl), 1);
+    --tweak-product-grid-text-below-list-scarcity-color: hsla(var(--white-hsl), 1);
+    --tweak-product-grid-text-below-list-status-color: hsla(var(--accent-hsl), 1);
+    --tweak-product-grid-text-below-list-title-color: hsla(var(--white-hsl), 1);
+    --tweak-product-quick-view-button-color: hsla(var(--black-hsl), 1);
+    --tweak-product-quick-view-lightbox-controls-color: hsla(var(--black-hsl), 1);
+    --tweak-product-quick-view-lightbox-overlay-color: hsla(var(--white-hsl), 1);
+    --tweak-quote-block-background-color: hsla(var(--white-hsl), 1);
+    --tweak-quote-block-source-color: hsla(var(--white-hsl), 1);
+    --tweak-quote-block-source-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-quote-block-text-color: hsla(var(--white-hsl), 1);
+    --tweak-quote-block-text-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-summary-block-background-color: hsla(var(--white-hsl), 1);
+    --tweak-summary-block-excerpt-color: hsla(var(--white-hsl), 1);
+    --tweak-summary-block-excerpt-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-summary-block-header-text-color: hsla(var(--white-hsl), 1);
+    --tweak-summary-block-header-text-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-summary-block-primary-metadata-color: hsla(var(--white-hsl), 1);
+    --tweak-summary-block-primary-metadata-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-summary-block-read-more-color: hsla(var(--white-hsl), 1);
+    --tweak-summary-block-read-more-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-summary-block-secondary-metadata-color: hsla(var(--white-hsl), 1);
+    --tweak-summary-block-secondary-metadata-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-summary-block-title-color: hsla(var(--white-hsl), 1);
+    --tweak-summary-block-title-color-on-background: hsla(var(--black-hsl), 1);
+    --tweak-text-block-background-color: hsla(var(--white-hsl), 1);
+    --tweak-video-item-description-color: hsla(var(--white-hsl), 1);
+    --tweak-video-item-meta-color: hsla(var(--white-hsl), 1);
+    --tweak-video-item-pagination-icon-color: hsla(var(--white-hsl), 1);
+    --tweak-video-item-pagination-title-color: hsla(var(--white-hsl), 1);
+    --tweak-video-item-title-color: hsla(var(--white-hsl), 1);
+    --video-grid-basic-description-color: hsla(var(--white-hsl), 1);
+    --video-grid-basic-meta-color: hsla(var(--white-hsl), 1);
+    --video-grid-basic-title-color: hsla(var(--white-hsl), 1);
+    --video-grid-category-nav-color: hsla(var(--white-hsl), 1);
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 2.3vw;
+    padding-bottom: 2.3vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    pointer-events: auto;
+}
+
+
