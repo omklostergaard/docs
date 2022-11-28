@@ -19,8 +19,6 @@ Heldigvis har forskningen givet os en solid og evidensbaseret viden om, hvad der
 I denne rapport giver vi et bud på, hvordan man igennem en ambitiøs rumlig planlægning kan være med til at sikre en positiv udvikling for biodiversiteten på Sjælland.
 
 
-
-
 ## Rapporten er inddelt i 3 afsnit:
 
 **DEL 1**
